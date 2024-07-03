@@ -1,17 +1,15 @@
-# PUNQZ2 and Raspberry Pi Based Electronic Voting Machine
+# FPGA Based Electronic Voting Machine
 
-This project is a digital design project for an electronic voting machine using Verilog code. The system is implemented on a PUNQZ2 board and a RPI module. The voting machine is designed for 2 candidates, with an extendable limit based on hardware availability. The project supports a maximum of 16 votes per candidate due to the 4-bit design, but this limit can be increased. The machine operates in two states: voting state and result state.
+This project is a digital design project for an electronic voting machine using Verilog code. The system is implemented on a PYNQ-Z2 board and a RPI module. The voting machine is designed for 2 candidates, with an extendable limit based on hardware availability. The project supports a maximum of 16 votes per candidate due to the 4-bit design, but this limit can be increased. The machine operates in two states: voting state and result state.
 
 ## Features
-- **Two Candidates**: Supports voting for two candidates, extendable to more candidates.
-- **Voting Limit**: Each candidate can receive up to 16 votes (4-bit limit).
 - **Voting State**: Allows users to cast votes. Red LED glows to indicate this state.
 - **Result State**: Displays the results of the voting in 8-bit format. Blue LED glows to indicate this state.
 - **Reset Functionality**: A reset button to reset all votes to 0.
 - **State Control**: Voting is disabled during the result state.
 
 ## Hardware Requirements
-- PUNQZ2 FPGA Board
+- PYNQ-Z2 FPGA Board
 - RPI module
 - Red and Blue LEDs
 - Buttons for voting and reset
@@ -36,8 +34,8 @@ The Verilog code is responsible for handling the voting logic, state transitions
 
 ## Project Files
 - `voting_machine.v`: Main Verilog code for the voting machine.
-- `top_module.v`: Top module integrating the voting logic with the hardware components.
-- `constraints.xdc`: Constraints file for the PUNQZ2 board.
+- `PYNQ-Z2.xdc`: Constraints file for the PYNQ-Z2 board.
+- `RPI.xdc`: Constraints file for the RPI module.
 
 ## Authors
 - Prakash Nandaniya
